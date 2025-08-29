@@ -56,8 +56,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 140px;
-    height: 140px;
+    width: 155px;
+    height: 155px;
     background: rgb(221, 148, 173);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.216);
     border-radius: 50%;
@@ -70,7 +70,7 @@ body {
 }
 #seal h2 {
     margin: 0;
-    font-size: 20px;
+    font-size: 30px;
     color: white;
     font-family: var(--font-1);
     font-weight: 400;
@@ -119,7 +119,7 @@ body {
     font-family: var(--font-1);
     font-weight: 400;
     font-style: italic;
-    font-size: 45px;
+    font-size: 50px;
     white-space: nowrap;
     margin-top: 30px;
 }
@@ -133,7 +133,7 @@ body {
     font-family: var(--font-1);
     font-weight: 400;
     font-style: italic;
-    font-size: 50px;
+    font-size: 70px;
     white-space: nowrap;
     margin-top: 150px;
 }
@@ -147,7 +147,7 @@ body {
     padding: 15px;
     font-weight: 400;
     font-style: italic;
-    font-size: 40px;
+    font-size: 35px;
     margin-top: -10px;
     margin-bottom: -10px;
     color: var(--color-1);
@@ -271,12 +271,13 @@ body {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     width: 180px;
     height: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px auto;   /* 🔑 centrado horizontal */
     border-radius: 10px;
     background-color: #ffffff91;
     cursor: pointer;
+    text-align: center;  /* 🔑 centra el texto del link */
 }
+
 .section-calendar a {
     text-decoration: none;
     font-family: var(--font-1);
@@ -350,7 +351,7 @@ body {
     font-family: var(--font-1);
     font-style: italic;
     font-weight: 400;
-    font-size: 28px;
+    font-size: 24px;
     color: var(--color-1);
    margin: 0;
 }
@@ -358,7 +359,7 @@ body {
     font-family: var(--font-1);
     font-style: italic;
     font-weight: 400;
-    font-size: 28px;
+    font-size: 24px;
     color: var(--color-1);
 }
 .section-b h1, .section-b h2, .section-b h3{
@@ -366,7 +367,7 @@ body {
     padding: 15px;
     font-weight: 400;
     font-style: italic;
-    font-size: 40px;
+    font-size: 35px;
     margin-top: -10px;
     margin-bottom: -10px;
     color: SaddleBrown;
@@ -377,7 +378,7 @@ body {
     padding: 10px;
     font-weight: 400;
     font-style: italic;
-    font-size: 40px;
+    font-size: 35px;
     margin-top: 20px;
     margin-bottom: 10px;
     color: var(--color-1);
@@ -452,7 +453,7 @@ body {
     top: 20px;
     right: 40px;
     color: #fff;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -534,7 +535,7 @@ footer {
         font-size: 1.5em;
     }
 }
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
     /* Laptop Styles */
     .seal{
     width: 200px;
@@ -614,7 +615,7 @@ footer {
     font-family: var(--font-1);
     font-weight: 400;
     font-style: italic;
-    font-size: 40px;
+    font-size: 35px;
     margin-top: 10px;
     margin-bottom: 10px;
     color: var(--color-1);
@@ -685,7 +686,7 @@ footer {
   font-family: var(--font-1);
   font-weight: 400;
   font-style: italic;
-  font-size: 40px;
+  font-size: 35px;
   color: var(--color-1);
   margin: 10px 0;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
@@ -776,6 +777,6 @@ footer {
 
 /* Responsive */
 @media (max-width: 480px) {
-  .wishes-section h2 { font-size: 34px; }
-  .wishes-section p { font-size: 20px; }
+  .wishes-section h2 { font-size: 35px; }
+  .wishes-section p { font-size: 24px; }
 }

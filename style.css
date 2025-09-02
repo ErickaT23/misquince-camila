@@ -1,6 +1,7 @@
 :root {
     --color-1: rgb(183, 102, 129);
     --font-1: "cormorant garamond", serif;
+    --font-2: "allura", sans-serif;
     --scroll-animation-duration: 0.5s;
 }
 
@@ -70,9 +71,9 @@ body {
 }
 #seal h2 {
     margin: 0;
-    font-size: 30px;
+    font-size: 40px;
     color: white;
-    font-family: var(--font-1);
+    font-family: var(--font-2);
     font-weight: 400;
     font-style: italic;
 }
@@ -140,7 +141,7 @@ body {
     color: var(--color-1);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     margin: 0;
-    font-family: var(--font-1);
+    font-family: var(--font-2);
     font-weight: 400;
     font-style: italic;
     font-size: 70px;
@@ -154,7 +155,7 @@ body {
     color: var(--color-1);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     margin: 0;
-    font-family: var(--font-1);
+    font-family: var(--font-2);
     font-weight: 400;
     font-style: italic;
     font-size: 90px;
@@ -301,7 +302,6 @@ body {
     cursor: pointer;
     text-align: center;  /* 🔑 centra el texto del link */
 }
-
 .section-calendar a {
     text-decoration: none;
     font-family: var(--font-1);
@@ -375,7 +375,7 @@ body {
     font-family: var(--font-1);
     font-style: italic;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 28px;
     color: var(--color-1);
    margin: 0;
 }
@@ -387,11 +387,11 @@ body {
     color: var(--color-1);
 }
 .section-b h1, .section-b h2, .section-b h3{
-    font-family: var(--font-1);
+    font-family: var(--font-2);
     padding: 15px;
     font-weight: 400;
     font-style: italic;
-    font-size: 35px;
+    font-size: 40px;
     margin-top: -10px;
     margin-bottom: -10px;
     color: SaddleBrown;
@@ -407,6 +407,12 @@ body {
     margin-bottom: 10px;
     color: var(--color-1);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+#nombreInvitado{
+    font-family: var(--font-2);
+}
+#cantidadPases{
+    font-family: var(--font-2);
 }
 .section p, .section-gifts p, .section-filter p{
     font-family: var(--font-1);

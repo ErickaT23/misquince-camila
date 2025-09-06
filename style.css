@@ -1,7 +1,7 @@
 :root {
     --color-1: rgb(183, 102, 129);
     --font-1: "cormorant garamond", serif;
-    --font-2: "Imperial Script", cursive;
+    --font-2: "Dancing Script", cursive;
     --scroll-animation-duration: 0.5s;
 }
 
@@ -16,7 +16,6 @@ body {
     text-align: center;
     background-color: white;
     font-family: 'cormorant garamond';
-    font-style: italic;
 }
 #envelope {
     position: fixed;
@@ -75,7 +74,6 @@ body {
     color: white;
     font-family: var(--font-2);
     font-weight: 400;
-    font-style: italic;
 }
 .section-ccerezo-inicial{
     position: relative;
@@ -143,7 +141,6 @@ body {
     margin: 0;
     font-family: var(--font-2);
     font-weight: 400;
-    font-style: italic;
     font-size: 70px;
     white-space: nowrap;
     margin-top: 30px;
@@ -157,7 +154,6 @@ body {
     margin: 0;
     font-family: var(--font-2);
     font-weight: 400;
-    font-style: italic;
     font-size: 90px;
     white-space: nowrap;
     margin-top: 200px;
@@ -390,7 +386,6 @@ body {
     font-family: var(--font-2);
     padding: 15px;
     font-weight: 400;
-    font-style: italic;
     font-size: 40px;
     margin-top: -10px;
     margin-bottom: -10px;

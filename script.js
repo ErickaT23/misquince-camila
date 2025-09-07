@@ -166,8 +166,8 @@ function cargarDatosInvitado() {
   if (invitadoActual) {
     if (invitadoId === "51") {
       // Caso especial → invitado genérico
-      document.getElementById('nombreInvitado').innerText = "Invitado Especial";
-      document.getElementById('cantidadPases').innerText = "Pases: (a definir)";
+      document.getElementById('nombreInvitado').innerText = "Invitado especial";
+      document.getElementById('cantidadPases').innerText = "Hemos guardado un espacio para ti";
     } else {
       // Invitado normal
       document.getElementById('nombreInvitado').innerText = invitadoActual.nombre;

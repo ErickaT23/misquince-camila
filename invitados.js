@@ -49,6 +49,7 @@ const invitados = {
   "47": { "nombre": "Hermanos Burn Pérez", "pases": 2 },
   "48": { "nombre": "Samantha Valentina Gallardo Ventura", "pases": 1 },
   "49": { "nombre": "André ianluca Arriaza Villatoro", "pases": 1 },
-  "50": { "nombre": "Victoria Cuyuch García", "pases": 1 }
+  "50": { "nombre": "Victoria Cuyuch García", "pases": 1 },
+  "51": { "nombre": "", "pases": "" } // Invitado genérico
 }
   

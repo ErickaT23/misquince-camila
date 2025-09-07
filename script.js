@@ -32,32 +32,41 @@ document.addEventListener('DOMContentLoaded', function() {
     cargarDatosInvitado();
 });
 
-// Función para obtener datos de invitados (sin inputs)
+// Función para obtener datos de invitados
 function cargarDatosInvitado() {
-    const params = new URLSearchParams(window.location.search);
-    const invitadoId = params.get('id');
+  const params = new URLSearchParams(window.location.search);
+  const invitadoId = params.get('id');
 
-    if (!invitadoId) {
-        alert('ID de invitado no encontrado en el enlace.');
-        return;
-    }
+  if (!invitadoId) {
+      alert('ID de invitado no encontrado en el enlace.');
+      return;
+  }
 
-    // Base de datos simulada
-    const invitados = {
-        '1': { nombre: 'Ana Pérez', pases: 3 },
-        '2': { nombre: 'Luis García', pases: 2 },
-        '3': { nombre: 'María López', pases: 4 }
-    };
+  // Base de datos simulada
+  const invitados = {
+      '1': { nombre: 'Ana Pérez', pases: 3 },
+      '2': { nombre: 'Luis García', pases: 2 },
+      '3': { nombre: 'María López', pases: 4 },
+      '51': { nombre: '', pases: '' } // Invitado genérico
+  };
 
-    const invitado = invitados[invitadoId];
+  const invitado = invitados[invitadoId];
 
-    if (invitado) {
-        document.getElementById('nombreInvitado').innerText = invitado.nombre;
-        document.getElementById('cantidadPases').innerText = `Pases: ${invitado.pases}`;
-    } else {
-        alert('Invitado no encontrado.');
-    }
+  if (invitado) {
+      if (invitadoId === "51") {
+          // Caso especial → invitado genérico
+          document.getElementById('nombreInvitado').innerText = "Invitado Especial";
+          document.getElementById('cantidadPases').innerText = "Pases: (a definir)";
+      } else {
+          // Invitados normales
+          document.getElementById('nombreInvitado').innerText = invitado.nombre;
+          document.getElementById('cantidadPases').innerText = `Pases: ${invitado.pases}`;
+      }
+  } else {
+      alert('Invitado no encontrado.');
+  }
 }
+
 
 // Función para iniciar el contador de la fecha del evento
 function iniciarContador() {
@@ -127,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-//Funcion para confirmar la asistencia 
+
 // --- Config del Form de Google (usa tus IDs de entrada) ---
 const FORM_BASE = 'https://docs.google.com/forms/d/e/1FAIpQLSdjU9KfiwIEhIkFyIw7LVk2wHkPt9zJ2t9IZbwjcevCihNWCQ/viewform?usp=pp_url';
 const ENTRY_NAME = 'entry.1297710131';     // Campo: Nombre
@@ -140,7 +149,6 @@ function buildFormLink(nombre, pases) {
   return `${FORM_BASE}&${params.toString()}`;
 }
 
-// ------- Tu código existente con pequeños ajustes -------
 let invitadoActual = null;
 
 // Función para obtener datos de invitados (desde invitados.js)
@@ -156,8 +164,15 @@ function cargarDatosInvitado() {
   invitadoActual = invitados[invitadoId] || null;
 
   if (invitadoActual) {
-    document.getElementById('nombreInvitado').innerText = invitadoActual.nombre;
-    document.getElementById('cantidadPases').innerText = `Pases: ${invitadoActual.pases}`;
+    if (invitadoId === "51") {
+      // Caso especial → invitado genérico
+      document.getElementById('nombreInvitado').innerText = "Invitado Especial";
+      document.getElementById('cantidadPases').innerText = "Pases: (a definir)";
+    } else {
+      // Invitado normal
+      document.getElementById('nombreInvitado').innerText = invitadoActual.nombre;
+      document.getElementById('cantidadPases').innerText = `Pases: ${invitadoActual.pases}`;
+    }
   } else {
     alert('Invitado no encontrado.');
   }
@@ -169,9 +184,20 @@ function confirmarAsistencia() {
     alert('No se pudo identificar al invitado.');
     return;
   }
-  const enlaceForm = buildFormLink(invitadoActual.nombre, invitadoActual.pases);
+
+  let enlaceForm;
+
+  if (invitadoActual.nombre === "" && invitadoActual.pases === "") {
+    // Invitado genérico → formulario vacío
+    enlaceForm = FORM_BASE;
+  } else {
+    // Invitado normal → formulario prellenado
+    enlaceForm = buildFormLink(invitadoActual.nombre, invitadoActual.pases);
+  }
+
   window.open(enlaceForm, '_blank');
 }
+
 
 //Funcion para abrir waze o maps
 //iglesia

@@ -101,6 +101,10 @@ const invitados = {
   "99": { "nombre": "Gerardo André", "pases": 2 },
   "100": { "nombre": "Travis Douma", "pases": 5 },
   "101": { "nombre": "Katalina", "pases": 1 },
-  "102": { "nombre": "Adriana Morales", "pases": 1}
+  "102": { "nombre": "Adriana Morales", "pases": 1},
+  "103": { "nombre": "Licda. Claudia Conlledo", "pases": 1 },
+  "104": { "nombre": "Fermin Barberena", "pases": 1 },
+  "105": { "nombre": "Esposos López Oliva", "pases": 2 },
+  "106": { "nombre": "Alma Cerón", "pases": 2 }
 }
   
